@@ -186,7 +186,6 @@ int main (int argc, const char * argv[])
 	
 	//ProcessSerialNumber		psn = { 0, kCurrentProcess };
 	//TransformProcessType( &psn, kProcessTransformToForegroundApplication );
-	
 	[[NSApplication sharedApplication] activateIgnoringOtherApps: YES];
 		
 	#if 0	// Cmdline tool
