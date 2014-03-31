@@ -194,7 +194,9 @@
 				else if (name != nil)
 				{
 					// add all other values as strings
-					[dict setObject:[[node stringValue] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] forKey:name];
+					NSString *nodeValue = [[node stringValue] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+					if (nodeValue)
+						[dict setObject:nodeValue forKey:name];
 				}
             }
             
